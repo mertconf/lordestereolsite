@@ -188,7 +188,7 @@ export default function Home() {
               src='https://i.hizliresim.com/e7xnxf5.png'
               title='Kweez Skyblock'
               description='Kweez Skyblock bir minecraft sunucusudur. Sunucumuzda özel etkinlikler, eğlenceler v.b. bulunur. Discord sunucumuza katılmak için tıklayabilirsin.'
-              href='https://e-z.host/'
+              href='https://discord.gg/4sneZ5qyYy'
               delay={0.1}
             />
           </ul>
