@@ -53,7 +53,7 @@ export default function Home() {
       <Head>
         <title>Lordestereol</title>
         <meta name="description" content="Lordestereol'ün (aka mertconf) sitesi" />
-        <meta property="og:image" content="https://i.hizliresim.com/bncl0k3.png" />
+        <meta property="og:image" content="https://i.hizliresim.com/l9701tb.png" />
         <meta property='theme-color' content='#17171a' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -61,7 +61,7 @@ export default function Home() {
       <header className='relative'>
         <nav className={`${pageLoad ? 'animate-fade-in-top' : 'opacity-0'} fixed flex w-full z-50 bg-slate-950/80 p-4 sm:px-24 px-4 justify-between items-center`}>
           <Link href='/'>
-            <img draggable={false} className='h-12 w-12 rounded-full' alt="image" src="https://i.hizliresim.com/bncl0k3.png" />
+            <img draggable={false} className='h-12 w-12 rounded-full' alt="image" src="https://i.hizliresim.com/l9701tb.png" />
           </Link>
           <ul className='flex flex-row gap-x-2'>
             <li>
