@@ -185,10 +185,10 @@ export default function Home() {
           </div>
           <ul className='grid lg:grid-cols-3 grid-cols-1 max-w-5xl w-full mx-auto gap-4 pt-8 pb-16 lg:px-0 md:px-32 px-8'>
             <Projectcard
-              src='https://i.hizliresim.com/e7xnxf5.png'
-              title='Kweez Skyblock'
-              description='Kweez Skyblock bir minecraft sunucusudur. Sunucumuzda özel etkinlikler, eğlenceler v.b. bulunur. Discord sunucumuza katılmak için tıklayabilirsin.'
-              href='https://discord.gg/4sneZ5qyYy'
+              src='https://i.hizliresim.com/qub4muc.png'
+              title='MARIANA | Discord'
+              description='Sohbet sunucusu olan MARIANA sunucum aslında bir projedir. Peki nasıl? Çünkü bu sunucu bir amaca dayalıdır ve yeni hedefler baz alır'
+              href='https://discord.gg/pCGjxyf7XN'
               delay={0.1}
             />
           </ul>
