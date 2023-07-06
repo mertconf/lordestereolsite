@@ -185,10 +185,10 @@ export default function Home() {
           </div>
           <ul className='grid lg:grid-cols-3 grid-cols-1 max-w-5xl w-full mx-auto gap-4 pt-8 pb-16 lg:px-0 md:px-32 px-8'>
             <Projectcard
-              src='https://i.hizliresim.com/qub4muc.png'
-              title='MARIANA | Discord'
-              description='Sohbet sunucusu olan MARIANA sunucum aslında bir projedir. Peki nasıl? Çünkü bu sunucu bir amaca dayalıdır ve yeni hedefler baz alır'
-              href='https://discord.gg/pCGjxyf7XN'
+              src='https://i.hizliresim.com/mfywqh0.png'
+              title='Kweezy Share'
+              description='Türkiyenin en büyük kod paylaşım sunucularından biri olan Kweezy Share içinde büyük bir Kod Cenneti barındırıyor. Sunucumuzda yetkili ekibimiz ile beraber sizlere güzel bir ortam oluşturmaktayız. Sunucuda en iyi altyapılar ve kodlar barınıyor. Daha fazlası için discord sunucumuza Gel :)'
+              href='https://discord.gg/PFV9FAE52e'
               delay={0.1}
             />
           </ul>
