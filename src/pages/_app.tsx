@@ -4,58 +4,56 @@ import { useState, useEffect } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [volume, setVolume] = useState(0.5);
 
   useEffect(() => {
     const audioElement = document.getElementById('background-music') as HTMLAudioElement;
+    audioElement.volume = volume;
     if (isPlaying) {
       audioElement.play();
     } else {
       audioElement.pause();
     }
-  }, [isPlaying]);
+  }, [isPlaying, volume]);
 
   const toggleMusic = () => {
     setIsPlaying(!isPlaying);
   };
 
   const adjustVolume = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const audioElement = document.getElementById('background-music') as HTMLAudioElement;
-    audioElement.volume = parseFloat(event.target.value);
+    setVolume(parseFloat(event.target.value));
   };
 
   return (
     <>
+      {/* Arka Plan Müziği */}
       <audio id="background-music" src="/background-music.mp3" loop />
 
       {/* Ses Kontrolü */}
-      <div style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
+      <div className="fixed top-4 right-4 z-50 flex items-center space-x-2">
+        {/* Ses Aç/Kapa Butonu */}
         <button
           onClick={toggleMusic}
-          style={{
-            backgroundColor: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: '20px',
-          }}
+          className="p-2 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none"
+          aria-label={isPlaying ? 'Müziği Durdur' : 'Müziği Başlat'}
         >
           {isPlaying ? '🔊' : '🔇'}
         </button>
+
+        {/* Ses Seviyesi Kontrolü */}
         <input
           type="range"
           min="0"
           max="1"
           step="0.1"
-          defaultValue="0.5"
+          value={volume}
           onChange={adjustVolume}
-          style={{
-            display: 'block',
-            marginTop: '10px',
-            width: '150px',
-          }}
+          className="w-24 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+          aria-label="Ses Seviyesi"
         />
       </div>
 
-      {/* Eski Kodlar */}
+      {/* Ana İçerik */}
       <Component {...pageProps} />
     </>
   );
