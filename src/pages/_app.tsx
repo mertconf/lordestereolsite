@@ -30,11 +30,11 @@ export default function App({ Component, pageProps }: AppProps) {
       <audio id="background-music" src="/background-music.mp3" loop />
 
       {/* Ses Kontrolü */}
-      <div className="fixed top-4 left-4 z-50 group">
+      <div className="fixed top-4 right-4 z-50 group">
         {/* Ses Aç/Kapa Butonu */}
         <button
           onClick={toggleMusic}
-          className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none shadow-lg transition-transform transform group-hover:scale-110 group-hover:rotate-12"
+          className="p-4 bg-gray-800 text-white rounded-full hover:bg-gray-700 focus:outline-none shadow-2xl transition-all transform group-hover:scale-110 group-hover:rotate-12"
           aria-label={isPlaying ? 'Müziği Durdur' : 'Müziği Başlat'}
         >
           {isPlaying ? '🔊' : '🔇'}
