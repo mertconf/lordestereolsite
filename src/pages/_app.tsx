@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <audio id="background-music" src="/background-music.mp3" loop />
 
       {/* Ses Kontrolü */}
-      <div className="fixed top-4 right-4 z-50 flex items-center space-x-2">
+      <div className="fixed bottom-4 right-4 z-50 group">
         {/* Ses Aç/Kapa Butonu */}
         <button
           onClick={toggleMusic}
@@ -40,17 +40,20 @@ export default function App({ Component, pageProps }: AppProps) {
           {isPlaying ? '🔊' : '🔇'}
         </button>
 
-        {/* Ses Seviyesi Kontrolü */}
-        <input
-          type="range"
-          min="0"
-          max="1"
-          step="0.1"
-          value={volume}
-          onChange={adjustVolume}
-          className="w-24 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-          aria-label="Ses Seviyesi"
-        />
+        {/* Ses Çubuğu */}
+        <div
+          className="hidden group-hover:flex flex-col items-center mt-2 transition-transform transform scale-y-0 group-hover:scale-y-100 origin-bottom"
+        >
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            value={volume}
+            onChange={adjustVolume}
+            className="w-24 h-2 bg-gray-300 rounded-lg appearance-none focus:outline-none"
+          />
+        </div>
       </div>
 
       {/* Ana İçerik */}
