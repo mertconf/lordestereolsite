@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <audio id="background-music" src="/background-music.mp3" loop />
 
       {/* Ses Kontrolü */}
-      <div className="fixed top-4 right-4 z-50 group">
+      <div className="fixed bottom-4 right-4 z-50 group">
         {/* Ses Aç/Kapa Butonu */}
         <button
           onClick={toggleMusic}
